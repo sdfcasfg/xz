@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>methods定义方法</title>
+		<script type="text/javascript" src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!--为button按钮绑定click事件-->
+			<button @click="showInfo">请戳死我</button><!--@click表示绑定单击事件,事件处理方法为showInfo-->
+			<p>{{msg}}</p><!--使用插值语法将msg绑定到页面中-->
+		</div>
+		<script>
+			var vm = new Vue({
+				el:'#app',
+				data:{
+					msg:''
+				},
+				methods:{
+					//定义事件处理方法showInfo
+					showInfo () {//定义事件处理方法showInfo，用于改变msg内容
+						this.msg = '大家下午好，我是美少女，谢谢！'
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
